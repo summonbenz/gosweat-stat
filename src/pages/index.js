@@ -9,8 +9,11 @@ import ViewCount from "../components/viewCount"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from "@fortawesome/free-brands-svg-icons"
+import ReactGA from 'react-ga';
 
 import "../components/layout.css"
+
+ReactGA.initialize('UA-123099315-1');
 
 const lineChart = (
   <div
