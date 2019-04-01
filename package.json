@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "firebase": "^5.9.2",
     "gatsby": "^2.3.3",
     "gatsby-image": "^2.0.35",
     "gatsby-plugin-manifest": "^2.0.25",
@@ -15,6 +16,7 @@
     "gatsby-transformer-sharp": "^2.1.17",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-charts": "^2.0.0-alpha.12",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0"
   },
