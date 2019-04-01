@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `SweatStat`,
-    description: `Sweat16! Stat`,
+    description: `Sweat16! Stat (Powered by GoSweat.family)`,
     author: `@nppi3enz`,
   },
   plugins: [
