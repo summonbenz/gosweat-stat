@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from "./Firebase";
+import CountUp from 'react-countup';
 
 function timestampToString(unix_timestamp){
     unix_timestamp *= 1000
@@ -47,7 +48,7 @@ class viewCount extends React.Component {
         return (
             <div>
                 <div id="view">
-                    {this.state.view_count}
+                    <CountUp end={this.state.view_count} />
                 </div>
                 <div
                 className="sub-text">
