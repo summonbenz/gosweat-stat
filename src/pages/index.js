@@ -10,6 +10,7 @@ import ViewCount from "../components/viewCount"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from "@fortawesome/free-brands-svg-icons"
 
+import "../components/layout.css"
 import Logo from '../images/logo.png'
 
 const lineChart = (
