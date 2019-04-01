@@ -11,7 +11,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from "@fortawesome/free-brands-svg-icons"
 
 import "../components/layout.css"
-import Logo from '../images/logo.png'
 
 const lineChart = (
   <div
@@ -41,7 +40,7 @@ const lineChart = (
 
 const IndexPage = () => (
   <div>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Stat ชาไข่มุก (Bubble Tea) - Sweat16!" keywords={[`bubble`, `tea`, `sweat16`]} />
     <div
       id="particles-js"
     >
