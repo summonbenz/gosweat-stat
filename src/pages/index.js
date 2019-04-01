@@ -8,7 +8,9 @@ import Particles from 'react-particles-js'
 import ViewCount from "../components/viewCount"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faYoutube } from "@fortawesome/free-brands-svg-icons"
 
+import Logo from '../images/logo.png'
 
 const lineChart = (
   <div
@@ -104,13 +106,13 @@ const IndexPage = () => (
   <div
     id="front"
     >
-    <img src="images/logo.png" height="200"/>
+    <img src={require('../images/logo.png')} height="200px"/>
     <ViewCount
       />
     
     <a className="youtube-btn" href="https://www.youtube.com/watch?v=1k9uvhTw9Fc" target="_blank">
-      <FontAwesomeIcon icon={['fab', 'apple']} />
-      Play Youtube
+      <FontAwesomeIcon icon={faYoutube} />&nbsp;
+       Play Youtube
     </a>
   </div>
   </div>
