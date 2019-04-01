@@ -28,6 +28,7 @@ class viewCount extends React.Component {
         this.unsubscribe = null;
         this.state = {
             view_count: 0,
+            view_count_old: 0,
             created_at: null
         };
     }
@@ -35,6 +36,7 @@ class viewCount extends React.Component {
         const tables = [];
         querySnapshot.forEach((doc) => {
             this.setState({
+                view_count_old: this.state.view_count,
                 view_count: doc.data().data.viewCount,
                 created_at: timestampToString(doc.data().created_at.seconds)
             });
@@ -48,7 +50,10 @@ class viewCount extends React.Component {
         return (
             <div>
                 <div id="view">
-                    <CountUp end={this.state.view_count} />
+                    <CountUp 
+                        start={this.state.view_count_old}
+                        end={this.state.view_count}
+                    />
                 </div>
                 <div
                 className="sub-text">
