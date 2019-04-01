@@ -615,8 +615,65 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+}
+canvas{
+  height: 100vh !important;
+  width: 100vw !important;
+
+}
+#front{
+  position: absolute;
+  z-index:2;
+  top: 0;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top:20px;
+}
+#view{
+  margin-top:40px;
+  font-size: 12em;
+  color: #543c22;
+  font-family: Arial;
+}
+.sub-text{
+  margin-top: 80px;
+  font-size:1.5em;
+  font-family: Arial Black;
+  color: #543c22;
+  
+}
+.info{
+  margin-top:10px;
+  font-size: 14px;
+}
+.youtube-btn{
+  margin-top: 10px;
+  display: inline-block;
+  color: red;
+  text-decoration: none;
+  border:4px solid red;
+  background: rgba(255,255,255,0.5);
+  padding:10px;
+  border-radius: 20px;
+  font-family: Arial;
+}
+.youtube-btn:hover{
+  opacity: 0.5;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+@media only screen and (max-width: 730px) {
+  #view{
+    font-size: 25vw;
   }
 }

@@ -2,9 +2,12 @@ import React from "react"
 // import { Link } from "gatsby"
 import { Chart } from "react-charts"
 
-import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
+import Particles from 'react-particles-js'  
+
+import ViewCount from "../components/viewCount"
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const lineChart = (
@@ -34,13 +37,87 @@ const lineChart = (
 );
 
 const IndexPage = () => (
-  <Layout>
+  <div>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Coming Soon...</h1>
+    <div
+      id="particles-js"
+    >
+    <Particles
+    params={{
+	    "particles": {
+	        "number": {
+	            "value": 60,
+	            "density": {
+	                "enable": false
+	            }
+          },
+          "color": {
+            "value":  ["#4aebe3","#fc96d0","#fdea68","#69bee9"]
+          },
+          "opacity": {
+            "value": 1,
+            "anim": {
+              "enable": false
+            }
+
+          },
+	        "size": {
+	            "value": 30,
+	            "random": true,
+	            "anim": {
+	                "speed": 4,
+	                "size_min": 10
+	            }
+	        },
+	        "line_linked": {
+	            "enable": false
+	        },
+	        "move": {
+	            "random": true,
+	            "speed": 3,
+	            "direction": "top",
+	            "out_mode": "out"
+	        }
+	    },
+	    "interactivity": {
+	        "events": {
+	            "onhover": {
+	                "enable": false,
+	                "mode": "bubble"
+	            },
+	            "onclick": {
+	                "enable": false,
+	                "mode": "repulse"
+	            }
+	        },
+	        "modes": {
+	            "bubble": {
+	                "distance": 250,
+	                "duration": 2,
+	                "size": 0,
+	                "opacity": 0
+	            },
+	        }
+	    }
+  }}>
+  </Particles>
+  <div
+    id="front"
+    >
+    <img src="images/logo.png" height="200"/>
+    <ViewCount
+      />
+    
+    <a className="youtube-btn" href="https://www.youtube.com/watch?v=1k9uvhTw9Fc" target="_blank">
+      <FontAwesomeIcon icon={['fab', 'apple']} />
+      Play Youtube
+    </a>
+  </div>
+  </div>
     {/* <div >
       { lineChart }
     </div> */}
-  </Layout>
+  </div>
 )
 
 export default IndexPage
