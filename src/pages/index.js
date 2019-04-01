@@ -14,6 +14,7 @@ import ReactGA from 'react-ga';
 import "../components/layout.css"
 
 ReactGA.initialize('UA-123099315-1');
+ReactGA.pageview('/');
 
 const lineChart = (
   <div
