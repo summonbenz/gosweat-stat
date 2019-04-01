@@ -10,8 +10,8 @@ function timestampToString(unix_timestamp){
           return len > 0? new Array(len).join(chr || '0')+this : this;
         }
         var d = new Date(unix_timestamp),
-        dformat = [ (d.getMonth()+1).padLeft(),
-                     d.getDate().padLeft(),
+        dformat = [ d.getDate().padLeft(),
+                    (d.getMonth()+1).padLeft(),
                      d.getFullYear()].join('/')+
                   ' ' +
                   [ d.getHours().padLeft(),
