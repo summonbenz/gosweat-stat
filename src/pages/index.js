@@ -110,7 +110,9 @@ const IndexPage = () => (
   <div
     id="front"
     >
-    <img src={require('../images/logo.png')} height="200px"/>
+    <div id="logo">
+      <img src={require('../images/logo.png')} height="200px"/>
+    </div>
     <ViewCount
       />
     

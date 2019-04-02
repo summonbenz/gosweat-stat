@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
 html {
-  font-family: sans-serif;
+  font-family: Kanit;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -637,21 +639,24 @@ canvas{
   padding-top:20px;
 }
 #view{
-  margin-top:40px;
+  margin-top:-80px;
   font-size: 12em;
+  line-height: 0.9em;
   color: #543c22;
-  font-family: Arial;
+  font-family: Kanit;
 }
 .sub-text{
-  margin-top: 80px;
+  /* margin-top: 66px; */
   font-size:1.5em;
-  font-family: Arial Black;
+  font-family: Kanit;
+  font-weight:800;
   color: #543c22;
   
 }
 .info{
   margin-top:10px;
   font-size: 14px;
+  font-family: Kanit;
 }
 .youtube-btn{
   margin-top: 10px;
@@ -662,11 +667,90 @@ canvas{
   background: rgba(255,255,255,0.5);
   padding:10px;
   border-radius: 16px;
-  font-family: Arial;
+  font-family: Kanit;
 }
 .youtube-btn:hover{
   opacity: 0.5;
 }
+.progress-box{
+  margin: 0 auto;
+  margin-top:20px;
+  max-width:700px;
+  padding-bottom:20px;
+}
+.progress-bar{
+  
+  margin:10px;
+  display: block;
+  background: #464646;
+  height: 68px;
+  
+  border-radius: 10px;
+  text-align: left;
+  padding:5px;
+}
+.progress-bar .percent{
+  
+  display: block;
+  height: 58px;
+  /* width:40%; */
+  border-radius: 8px;
+  text-align: right;
+
+  -webkit-transition: width 1.5s; /* Safari */
+  transition: width 1.5s;
+  transition-timing-function: ease;
+}
+.mook{
+  width: 75px;
+  height: 58px;
+  display: inline-block;
+  animation: play 0.8s steps(10) infinite;
+}
+.progress-footer{
+  padding-top:10px;
+  position: relative;
+}
+.bubble{
+  position: absolute;
+  right: 0;
+	background: #f20088;
+  border-radius: .4em;
+  width:50px;
+  color: #fff;
+  font-family: Kanit;
+}
+.bubble:after {
+  content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color: #f20088;
+	border-top: 0;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+@keyframes play {
+  100% { background-position: -744px; }
+}
+#logo{
+  height: 300px;
+  position: relative;
+}
+#logo img{
+  margin-left: -106px;
+  position: absolute;
+  animation: anilogo 2s ease-in-out infinite;
+}
+@keyframes anilogo {
+  0% {top:0px;}
+  50% {top:20px;}
+  100% {top:0px;}
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

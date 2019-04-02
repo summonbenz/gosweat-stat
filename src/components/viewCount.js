@@ -1,6 +1,8 @@
 import React from 'react';
 import firebase from "./Firebase";
 import CountUp from 'react-countup';
+import img from '../images/bgload.gif';
+import sprite from '../images/sprite.png';
 
 function timestampToString(unix_timestamp){
     unix_timestamp *= 1000
@@ -29,12 +31,20 @@ class viewCount extends React.Component {
         this.state = {
             view_count: 0,
             view_count_old: 0,
-            created_at: null
+            created_at: null,
+            percent: 10,
         };
     }
     onCollectionUpdate = (querySnapshot) => {
         const tables = [];
         querySnapshot.forEach((doc) => {
+            var goal = 1000000
+            var calper = Math.floor(100*doc.data().data.viewCount/goal)
+            if(calper > 10){
+                this.setState({
+                    percent: calper
+                })
+            }
             this.setState({
                 view_count_old: this.state.view_count,
                 view_count: doc.data().data.viewCount,
@@ -58,6 +68,27 @@ class viewCount extends React.Component {
                 <div
                 className="sub-text">
                     Views
+                </div>
+                <div className="progress-box">
+                    <div className="progress-bar">
+                        <div className="percent"
+                            style={{
+                                width: this.state.percent+ '%',
+                                backgroundColor: "#f20088",
+                                backgroundImage: `url(${img})` }}
+                        >
+                        <div className="mook"
+                        style={{ backgroundImage: `url(${sprite})`}}
+                        ></div>
+                        </div>
+                    </div>
+                    <div
+                    class="progress-footer">
+                        <div
+                        className="bubble">
+                        1M
+                        </div>
+                    </div>
                 </div>
                 <div
                 className="info">
