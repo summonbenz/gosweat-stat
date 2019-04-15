@@ -38,7 +38,7 @@ class viewCount extends React.Component {
     onCollectionUpdate = (querySnapshot) => {
         const tables = [];
         querySnapshot.forEach((doc) => {
-            var goal = 1000000
+            var goal = 2000000
             var calper = Math.floor(100*doc.data().data.viewCount/goal)
             if(calper > 10){
                 this.setState({
@@ -86,7 +86,7 @@ class viewCount extends React.Component {
                     class="progress-footer">
                         <div
                         className="bubble">
-                        1M
+                        2M
                         </div>
                     </div>
                 </div>
